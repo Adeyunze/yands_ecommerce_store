@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { useCartContext } from '../context/cart_context';
 import BreadCrumbs from '../components/BreadCrumbs';
 import CartItems from '../components/CartItems';
@@ -12,9 +13,12 @@ const CartPage = () => {
     return (
       <>
         <BreadCrumbs page={"Cart"} />
-        <div className='flex justify-center items-center h-[60vh]'>
-          <h1 className='text-center text-3xl font-medium'>Your cart is empty</h1>
-        </div>
+        <div className='h-[60vh] flex flex-col justify-center items-center'>
+            <h2 className='text-xl font-meduim'>Your cart is empty</h2>
+            <Link to='/' className='bg-sky-600 mt-7 text-white sm:w-[130px] text-sm py-2 px-2 rounded flex justify-center items-center uppercase'>
+              fill it
+            </Link>
+          </div>
       </>
     )
   }

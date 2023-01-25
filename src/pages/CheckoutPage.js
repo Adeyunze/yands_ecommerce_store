@@ -16,9 +16,9 @@ const CheckoutPage = () => {
       <BreadCrumbs page='checkout'/>
       <Wrapper className='page'>
         {cart.length < 1 ? (
-          <div className='empty'>
-            <h2>Your cart is empty</h2>
-            <Link to='/' className='btn'>
+          <div className='h-[60vh] flex flex-col justify-center items-center'>
+            <h2 className='text-xl font-meduim'>Your cart is empty</h2>
+            <Link to='/' className='bg-sky-600 mt-7 text-white sm:w-[130px] text-sm py-2 px-2 rounded flex justify-center items-center uppercase'>
               fill it
             </Link>
           </div>
