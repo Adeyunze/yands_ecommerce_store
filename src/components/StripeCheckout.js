@@ -47,9 +47,8 @@ const CheckoutForm = () => {
         JSON.stringify({cart, shipping_fee, total_amount})
         )
         setClientSecret(data.clientSecret)
-        console.log(data.clientSecret);
     } catch (error) {
-      console.log(error.response);
+      // console.log(error.response);
     }
   }
 
