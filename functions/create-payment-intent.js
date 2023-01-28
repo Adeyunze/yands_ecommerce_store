@@ -1,12 +1,16 @@
-require('dotenv').config()
+/* eslint-disable no-unused-vars */
+const dotenv = require('dotenv')
+dotenv.config()
 
 const stripe = require('stripe')(process.env.REACT_APP_STRIPE_SECRET_KEY)
 
 exports.handler = async function (event, context) {
-    const { shipping_fee, total_amount} = JSON.parse(event.body)
+    const { cart, shipping_fee, total_amount} = JSON.parse(event.body)
     
     const calculateOrderAmount = () => {
-      return (shipping_fee + total_amount) * 100
+      let total = shipping_fee + total_amount
+      total = Math.round(total * 100).toFixed(2)
+      return Number(total)
     }
 
     try {

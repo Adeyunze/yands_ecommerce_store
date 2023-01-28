@@ -82,7 +82,7 @@ const CheckoutForm = () => {
       setTimeout(() => {
         clearCart()
         navigate('/')
-      }, 10000)
+      }, 5000)
     }
   }
 
