@@ -23,7 +23,7 @@ nav {
 }
 
 .bottom-nav-toggle {
-    @apply md:w-fit md:static md:h-fit flex flex-col-reverse justify-end translate-x-0 items-start fixed z-10 top-0 left-0 w-[80vw] h-[100vh] bg-white transition-transform;
+    @apply md:w-fit md:static md:h-fit flex flex-col-reverse justify-end translate-x-0 items-start fixed z-10 top-0 left-0 w-[80vw] h-[100vh] bg-white transition ease-in-out duration-300;
     
 }
 
@@ -44,7 +44,7 @@ nav {
 }
 
 .link-toggle {
-    @apply md:w-fit md:py-0 md:pl-0 md:text-[20px] text-[20px] pr-5 hover:text-[#3a3a3a] ease-in duration-200 w-[100%] pl-5 py-3;
+    @apply md:w-fit md:py-0 md:pl-0 md:text-[20px] text-[20px] pr-5 hover:text-[#3a3a3a] w-[100%] pl-5 py-3;
 }
 
 .link-default {
